@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BlinqTestApp</string>
+    <string name="company_name">Broccoli &amp; Co.</string>
+    <string name="text_below_header">Press this button to request an invite</string>
+    <string name="request_button">Request here</string>
+    <string name="request_name_textview_hint">Example: John</string>
+    <string name="request_mail_textview_hint">Example: asd@asd.com</string>
+    <string name="request_name_error">You must type a name</string>
+    <string name="request_short_name_error">Name must be minimum 3 chars long</string>
+    <string name="request_email_error">You must type an email</string>
+    <string name="request_invalid_email_error">Email not in valid format</string>
 </resources>
