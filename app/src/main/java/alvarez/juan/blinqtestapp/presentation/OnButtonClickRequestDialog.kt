@@ -1,5 +1,5 @@
 package alvarez.juan.blinqtestapp.presentation
 
 interface OnButtonClickRequestDialog {
-    fun onClick()
+    fun onClick(name: String, email: String)
 }

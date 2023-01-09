@@ -25,8 +25,11 @@ class EnterRequestDialog {
 
         dialogBtnRequest.setOnClickListener {
             if (validateName(context, dialogNameInput) && validateEmail(context, dialogEmailInput)) {
+                onButtonClickRequestDialog.onClick(
+                    dialogNameInput?.editText?.text.toString().trim(),
+                    dialogEmailInput?.editText?.text.toString().trim()
+                )
                 dialog.dismiss()
-                onButtonClickRequestDialog.onClick()
             }
         }
 
