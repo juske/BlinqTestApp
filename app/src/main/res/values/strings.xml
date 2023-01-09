@@ -9,4 +9,13 @@
     <string name="request_short_name_error">Name must be minimum 3 chars long</string>
     <string name="request_email_error">You must type an email</string>
     <string name="request_invalid_email_error">Email not in valid format</string>
+    <string name="request_success_popup_text">Your invitation request was successful</string>
+    <string name="request_success_popup_title">Awesome</string>
+    <string name="request_success_popup_button">Accept</string>
+    <string name="request_success_server_response">Success</string>
+    <string name="congrats_fragment_congratulations">The invite request was processed successfully!</string>
+    <string name="shared_preferences">Shared Preferences</string>
+    <string name="shared_preferences_user_registered">Is user registered</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

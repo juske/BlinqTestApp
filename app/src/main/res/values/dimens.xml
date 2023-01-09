@@ -3,4 +3,5 @@
     <dimen name="horizontal_margin">12dp</dimen>
     <dimen name="request_modal_button_top">16dp</dimen>
     <dimen name="request_modal_edittext_top">12dp</dimen>
+    <dimen name="lottie_height">200dp</dimen>
 </resources>
