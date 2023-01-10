@@ -3,14 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:ignore="MissingDefaultResource">
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="340dp"
+        android:layout_width="320dp"
         android:layout_height="290dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
         app:cardCornerRadius="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,11 +20,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="61dp"
-                android:layout_height="61dp"
+                android:layout_width="@dimen/custom_popup_icon"
+                android:layout_height="@dimen/custom_popup_icon"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/ic_baseline_warning_24"
+                android:src="@drawable/login_icon"
                 tools:ignore="ContentDescription" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -67,9 +64,8 @@
                 android:background="@drawable/rounded_corner"
                 android:gravity="center"
                 android:text="Close"
-                android:textColor="@color/purple_200"
-                android:textSize="16dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+                android:textColor="@color/water_green"
+                android:textSize="16dp"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

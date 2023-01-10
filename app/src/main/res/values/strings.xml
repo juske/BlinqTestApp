@@ -1,6 +1,11 @@
 <resources>
+    <!-- Shared strings -->
     <string name="app_name">BlinqTestApp</string>
+    <string name="shared_preferences">Shared Preferences</string>
+    <string name="shared_preferences_user_registered">Is user registered</string>
     <string name="company_name">Broccoli &amp; Co.</string>
+
+    <!-- Main fragment -->
     <string name="text_below_header">Press this button to request an invite</string>
     <string name="request_button">Request here</string>
     <string name="request_name_textview_hint">Example: John</string>
@@ -10,12 +15,25 @@
     <string name="request_email_error">You must type an email</string>
     <string name="request_invalid_email_error">Email not in valid format</string>
     <string name="request_success_popup_text">Your invitation request was successful</string>
+    <string name="request_error_popup_text">There was an error processing your request</string>
     <string name="request_success_popup_title">Awesome</string>
+    <string name="request_error_popup_title">Error</string>
     <string name="request_success_popup_button">Accept</string>
     <string name="request_success_server_response">Success</string>
+    <string name="loading">Loading</string>
+
+    <!-- Congratulations fragment -->
     <string name="congrats_fragment_congratulations">The invite request was processed successfully!</string>
-    <string name="shared_preferences">Shared Preferences</string>
-    <string name="shared_preferences_user_registered">Is user registered</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Precancel fragment -->
+    <string name="text_below_header_cancel">Press this button to cancel an invite</string>
+    <string name="cancel_button">Cancel here</string>
+    <string name="cancel_request_popup_title">Warning</string>
+    <string name="cancel_request_popup_text">You are about to cancel your request. Are you sure?</string>
+    <string name="cancel_request_popup_button">Cancel request</string>
+    <string name="keep_request_popup_button">Keep request</string>
+
+    <!-- Cancel fragment -->
+    <string name="cancel_success_text">Your invitation request cancel was successful</string>
+
 </resources>

@@ -6,8 +6,9 @@ import alvarez.juan.blinqtestapp.data.network.model.Request
 import alvarez.juan.blinqtestapp.databinding.FragmentMainBinding
 import alvarez.juan.blinqtestapp.presentation.EnterRequestDialog
 import alvarez.juan.blinqtestapp.presentation.OnButtonClickRequestDialog
-import alvarez.juan.blinqtestapp.presentation.congratulations.CongratulationsFragment
+import alvarez.juan.blinqtestapp.util.hideView
 import alvarez.juan.blinqtestapp.util.observe
+import alvarez.juan.blinqtestapp.util.showView
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -28,6 +29,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         val onButtonClickRequestDialog: OnButtonClickRequestDialog = object : OnButtonClickRequestDialog {
             override fun onClick(name: String, email: String) {
+                binding.linearLayoutLoading.showView()
+                binding.linearLayoutContent.hideView()
                 viewModel.postRequest(Request(name, email))
             }
         }
@@ -47,15 +50,28 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         if (requestResult == "success") {
             alertDialog.apply {
-                setIcon(R.drawable.ic_baseline_warning_24)
+                setIcon(R.drawable.happy_face_icon)
                 setTitle(R.string.request_success_popup_title)
                 setMessage(R.string.request_success_popup_text)
                 setPositiveButton(R.string.request_success_popup_button) { _, _ ->
-                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                    transaction.replace(R.id.fragmentContainer, CongratulationsFragment::class.java, null)
-                    transaction.commit()
                 }
             }.create().show()
+
+            binding.linearLayoutLoading.hideView()
+            binding.linearLayoutContent.showView()
+        }
+
+        if (requestResult == "Error") {
+            alertDialog.apply {
+                setIcon(R.drawable.error_icon)
+                setTitle(R.string.request_error_popup_title)
+                setMessage(R.string.request_error_popup_text)
+                setPositiveButton(R.string.request_success_popup_button) { _, _ ->
+                }
+            }.create().show()
+
+            binding.linearLayoutLoading.hideView()
+            binding.linearLayoutContent.showView()
         }
     }
 }

@@ -10,4 +10,8 @@
     <color name="dark_green">#3D833F</color>
     <color name="light_green">#5DEF63</color>
     <color name="middle_green">#55C159</color>
+    <color name="dark_red">#B10615</color>
+    <color name="light_red">#FB0808</color>
+    <color name="button_brown">#7c7344</color>
+    <color name="water_green">#60a67b</color>
 </resources>

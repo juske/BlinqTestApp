@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="horizontal_margin">12dp</dimen>
+    <dimen name="vertical_margin">12dp</dimen>
     <dimen name="request_modal_button_top">16dp</dimen>
     <dimen name="request_modal_edittext_top">12dp</dimen>
-    <dimen name="lottie_height">200dp</dimen>
+    <dimen name="lottie_height">300dp</dimen>
+    <dimen name="cancel_lottie_margin_top">20dp</dimen>
+    <dimen name="custom_popup_icon">61dp</dimen>
+    <dimen name="loading_bar_dimens">61dp</dimen>
+    <dimen name="lottie_main_fragment">100dp</dimen>
 </resources>

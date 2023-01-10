@@ -25,7 +25,7 @@ class MainViewModel @Inject constructor(
             when(repository.sendRequest(request)) {
                 is State.Error -> _requestInvitation.value = "Error"
                 is State.Success -> _requestInvitation.value = "success"
-                else -> {}
+                is State.Loading -> _requestInvitation.value = "loading"
             }
         }
     }

@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animation"
         android:gravity="center_horizontal"
-        android:textColor="@color/dark_green"
+        android:textColor="@color/water_green"
         android:textSize="30sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

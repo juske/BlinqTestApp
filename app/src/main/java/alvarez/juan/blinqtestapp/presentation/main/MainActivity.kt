@@ -2,7 +2,7 @@ package alvarez.juan.blinqtestapp.presentation.main
 
 import alvarez.juan.blinqtestapp.R
 import alvarez.juan.blinqtestapp.databinding.ActivityMainBinding
-import alvarez.juan.blinqtestapp.presentation.cancel.CancelFragment
+import alvarez.juan.blinqtestapp.presentation.precancel.PreCancelFragment
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences: SharedPreferences =
             this.getSharedPreferences(getString(R.string.shared_preferences), Context.MODE_PRIVATE)
 
-        if (sharedPreferences.getBoolean(getString(R.string.shared_preferences), false)) {
+        if (sharedPreferences.getBoolean(getString(R.string.shared_preferences_user_registered), false)) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragmentContainer, MainFragment::class.java, null)
+                .add(R.id.fragmentContainer, PreCancelFragment::class.java, null)
                 .commit()
         } else {
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragmentContainer, CancelFragment::class.java, null)
+                .add(R.id.fragmentContainer, MainFragment::class.java, null)
                 .commit()
         }
     }
