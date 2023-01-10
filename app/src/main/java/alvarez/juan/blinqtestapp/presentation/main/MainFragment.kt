@@ -6,6 +6,7 @@ import alvarez.juan.blinqtestapp.data.network.model.Request
 import alvarez.juan.blinqtestapp.databinding.FragmentMainBinding
 import alvarez.juan.blinqtestapp.presentation.EnterRequestDialog
 import alvarez.juan.blinqtestapp.presentation.OnButtonClickRequestDialog
+import alvarez.juan.blinqtestapp.presentation.congratulations.CongratulationsFragment
 import alvarez.juan.blinqtestapp.util.hideView
 import alvarez.juan.blinqtestapp.util.observe
 import alvarez.juan.blinqtestapp.util.showView
@@ -54,6 +55,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 setTitle(R.string.request_success_popup_title)
                 setMessage(R.string.request_success_popup_text)
                 setPositiveButton(R.string.request_success_popup_button) { _, _ ->
+                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.fragmentContainer, CongratulationsFragment::class.java, null)
+                    transaction.commit()
                 }
             }.create().show()
 

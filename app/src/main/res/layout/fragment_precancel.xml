@@ -13,6 +13,14 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation"
+            android:layout_width="@dimen/lottie_main_fragment"
+            android:layout_height="@dimen/lottie_main_fragment"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/broccoli" />
+
         <TextView
             android:id="@+id/header"
             android:layout_width="wrap_content"
